@@ -8,9 +8,13 @@ function guessing(){
     echo "How many files are in the current directory?"
     read response
 
-    if [[ $response -ne $1 ]]
+    if [[ $response -gt $1 ]]
     then
-	  echo " You entered: $response and it isn't right.Try again!!!."
+	  echo " Your response is hight.Try again!!!."
+	  echo " "
+    elif [[ $response -lt $1 ]]
+    then
+	  echo " Your response is low.Try again!!!."
 	  echo " "
     else
 	  echo "Congrats!!!"
